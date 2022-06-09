@@ -1,0 +1,43 @@
+{
+  "header": {
+    "icon": {
+      "color": "green",
+      "style": "float",
+      "name": "pin"
+    },
+    "color": "default",
+    "nav": [
+      {
+        "href": "",
+        "label": "Home"
+      },
+      {
+        "href": "posts",
+        "label": "Blog"
+      },
+      {
+        "href": "about",
+        "label": "About"
+      },
+      {
+        "href": "Contact",
+        "label": "Contact"
+      }
+    ]
+  },
+  "footer": {
+    "color": "default",
+    "social": {
+      "facebook": "/",
+      "twitter": "/",
+      "instagram": "/",
+      "github": "/"
+    }
+  },
+  "theme": {
+    "color": "orange",
+    "font": "sans",
+    "icon": "boxicon",
+    "darkMode": "dark"
+  }
+}
