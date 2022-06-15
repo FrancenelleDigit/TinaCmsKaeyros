@@ -4,6 +4,8 @@ import { featureBlockSchema } from "../components/blocks/features";
 import { heroBlockSchema } from "../components/blocks/hero";
 import { testimonialBlockSchema } from "../components/blocks/testimonial";
 import { iconSchema } from "../components/util/icon";
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone';
 
 const schema = defineSchema({
   collections: [

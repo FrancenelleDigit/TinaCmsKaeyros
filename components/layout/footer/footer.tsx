@@ -6,6 +6,10 @@ import { Container } from "../../util/container";
 import { RawRenderer } from "./rawRenderer";
 import { useTheme } from "..";
 import { Icon } from "../../util/icon";
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 export const Footer = ({ data, icon, rawData }) => {
   const theme = useTheme();
@@ -45,89 +49,182 @@ export const Footer = ({ data, icon, rawData }) => {
   return (
     <footer className={`bg-gradient-to-br ${footerColorCss}`}>
       <Container className="relative" size="small">
-        <div className="flex justify-between items-center gap-6 flex-wrap">
-          <Link href="/" passHref>
-            <a className="group mx-2 flex items-center font-bold tracking-tight text-gray-400 dark:text-gray-300 opacity-50 hover:opacity-100 transition duration-150 ease-out whitespace-nowrap">
-              <Icon
-                parentColor={data.color}
-                data={{
-                  name: icon.name,
-                  color: data.color === "primary" ? "primary" : icon.color,
-                  style: icon.style,
-                }}
-                className="inline-block h-10 w-auto group-hover:text-orange-500"
-              />
-            </a>
-          </Link>
-          <div className="flex gap-4">
-            {data.social && data.social.facebook && (
-              <a
-                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
-                href={data.social.facebook}
-                target="_blank"
-              >
-                <FaFacebookF
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
-                />
+        <div className="flex justify-between items-center grid-cols-3 gap-6 flex-wrap">
+          
+          <div className="grid">
+           <h1 className="text-xl md:text-7xl titleinfooter">Edie</h1>
+            <Link href="/" passHref>
+              <a className="group mx-2 flex items-center font-bold tracking-tight text-gray-400 dark:text-gray-300 opacity-50 hover:opacity-100 transition duration-150 ease-out whitespace-nowrap">
+
+              {data.social && data.social.facebook && (
+                <a
+                  className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
+                  href={data.social.facebook}
+                  target="_blank"
+                >
+                  <FacebookOutlinedIcon
+                    className="footIcon"
+                  />
+                </a>
+              )}
+              {data.social && data.social.twitter && (
+                <a
+                  className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
+                  href={data.social.twitter}
+                  target="_blank"
+                >
+                  <TwitterIcon
+                    className={`${socialIconClasses} ${
+                      socialIconColorClasses[
+                        data.color === "primary" ? "primary" : theme.color
+                      ]
+                    }`}
+                  />
+                </a>
+              )}
+              {data.social && data.social.instagram && (
+                <a
+                  className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
+                  href={data.social.instagram}
+                  target="_blank"
+                >
+                  <InstagramIcon
+                    className={`${socialIconClasses} ${
+                      socialIconColorClasses[
+                        data.color === "primary" ? "primary" : theme.color
+                      ]
+                    }`}
+                  />
+                </a>
+              )}
+              {data.social && data.social.github && (
+                <a
+                  className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
+                  href={data.social.github}
+                  target="_blank"
+                >
+                  <YouTubeIcon
+                    className={`${socialIconClasses} ${
+                      socialIconColorClasses[
+                        data.color === "primary" ? "primary" : theme.color
+                      ]
+                    }`}
+                  />
+                </a>
+              )}
               </a>
-            )}
-            {data.social && data.social.twitter && (
-              <a
-                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
-                href={data.social.twitter}
-                target="_blank"
-              >
-                <FaTwitter
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
-                />
-              </a>
-            )}
-            {data.social && data.social.instagram && (
-              <a
-                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
-                href={data.social.instagram}
-                target="_blank"
-              >
-                <AiFillInstagram
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
-                />
-              </a>
-            )}
-            {data.social && data.social.github && (
-              <a
-                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
-                href={data.social.github}
-                target="_blank"
-              >
-                <FaGithub
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
-                />
-              </a>
-            )}
+            </Link>
+          </div>
+            
+            
+        
+        
+          <div className="flex grid gap-4 listPageFooter">
+          
+            <h4 className="soustitlefooter">Menu</h4>
+            <ul className="containSoustitlefooter">
+              
+                    <li className="">
+                      <Link href="/" passHref>
+                        <a className="">
+                          Home
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="/" passHref>
+                        <a className="">
+                          Project
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="/" passHref>
+                        <a className="">
+                          Project
+                        </a>
+                      </Link>
+                    </li>
+                
+            </ul>
+          </div>
+
+          <div className="flex grid gap-4 listAboutusFooter">
+          
+            <h4 className="soustitlefooter">ABOUT US</h4>
+            <ul className="containSoustitlefooter">
+              
+                    <li className="">
+                      <Link href="/" passHref>
+                        <a className="">
+                          Home
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="/" passHref>
+                        <a className="">
+                          Project
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="/" passHref>
+                        <a className="">
+                          Project
+                        </a>
+                      </Link>
+                    </li>
+                
+            </ul>
+          </div>
+          <div className="flex grid gap-4 listAboutusFooter">
+          
+            <h4 className="soustitlefooter">Contact us</h4>
+            <ul className="containSoustitlefooter">
+              
+                    <li className="">
+                      <Link href="/" passHref>
+                        <a className="">
+                          Home
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="/" passHref>
+                        <a className="">
+                          Project
+                        </a>
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="/" passHref>
+                        <a className="">
+                          Project
+                        </a>
+                      </Link>
+                    </li>
+                
+            </ul>
           </div>
           <RawRenderer parentColor={data.color} rawData={rawData} />
+
+
         </div>
+        
         <div
           className={`absolute h-1 bg-gradient-to-r from-transparent ${
             data.color === "primary" ? `via-white` : `via-black dark:via-white`
           } to-transparent top-0 left-4 right-4 opacity-5`}
         ></div>
+        <div className="grid grid-cols-2">
+          <div className="flex justify-start">
+            <p>Design by kaeyros analitics</p>
+          </div>
+          <div className="flex justify-end">
+            <p>copyright 2022 Edie ALL RIGHTS RESERVED</p>
+          </div>
+        </div>
       </Container>
     </footer>
   );

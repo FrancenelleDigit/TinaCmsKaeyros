@@ -3,21 +3,24 @@
     "icon": {
       "color": "orange",
       "style": "float",
-      "name": "tina"
+      "name": "pin"
     },
     "color": "default",
     "nav": [
       {
-        "href": "",
-        "label": "Home"
+        "href": "about",
+        "label": "About us"
       },
       {
-        "href": "about",
-        "label": "About"
+        "href": "home",
+        "label": "Sign up"
+      },
+      {
+        "href": ""
       },
       {
         "href": "posts",
-        "label": "Blog"
+        "label": "En|De"
       }
     ]
   },
@@ -30,9 +33,9 @@
     }
   },
   "theme": {
-    "color": "blue",
+    "color": "orange",
     "font": "sans",
     "icon": "boxicon",
-    "darkMode": "system"
+    "darkMode": "dark"
   }
 }

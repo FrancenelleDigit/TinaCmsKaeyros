@@ -23,9 +23,9 @@ export const Hero = ({ data, parentField }) => {
     <Section color={data.color}>
       <Container
         size="large"
-        className="grid grid-cols-1 lg:grid-cols-3 gap-x-10 gap-y-8 items-center justify-center"
+        className="policetheme grid gap-4 grid-cols-2 items-center justify-center"
       >
-        <div className="row-start-2 lg:row-start-1 lg:col-start-1 lg:col-end-3 text-center lg:text-left">
+        <div className="text-center lg:text-left">
           {data.tagline && (
             <h2
               data-tinafield={`${parentField}.tagline`}
@@ -54,29 +54,25 @@ export const Hero = ({ data, parentField }) => {
           {data.text && (
             <div
               data-tinafield={`${parentField}.text`}
-              className={`prose prose-lg mx-auto lg:mx-0 mb-10 ${
+              className={`row-end-1 row-end-4 prose prose-lg text-xl md:text-7xl ${
                 data.color === "primary" ? `prose-primary` : `dark:prose-dark`
               }`}
             >
               <TinaMarkdown content={data.text} />
             </div>
           )}
-          {data.actions && (
-            <Actions
-              parentField={`${parentField}.actions`}
-              className="justify-center lg:justify-start py-2"
-              parentColor={data.color}
-              actions={data.actions}
-            />
-          )}
+         
         </div>
+        <div className="row-start-1 row-span-2"></div>
+        {/* <div className="row-start-1 row-span-2">TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT prose prose-lg IMAGE w-full max-w-screen-lg md:max-w-prose object-none </div>
+        */}
         {data.image && (
           <div
             data-tinafield={`${parentField}.image`}
-            className="row-start-1 flex justify-center"
+            className="row-end-2 row-span-6"
           >
             <img
-              className="w-full max-w-xs lg:max-w-none h-auto"
+              className="" 
               alt={data.image.alt}
               src={data.image.src}
             />

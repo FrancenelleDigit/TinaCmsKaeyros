@@ -1,0 +1,71 @@
+.tracking-tight .titleEdie {
+    color: #FF8F0C;
+    font-family: Permanent Marker;
+}
+.flex .gap-6{
+    color: #FF8F0C;
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+
+.to-orange-600 {
+    --tw-gradient-to: #FF8F0C;
+}
+.from-orange-500 {
+    --tw-gradient-from: #FF8F0C;
+}
+.dark .dark\:to-gray-1000 {
+    --tw-gradient-to: #FF8F0C;
+}
+.dark .dark\:from-gray-900 {
+    --tw-gradient-from: #FF8F0C;
+}
+.listPageFooter, .listAboutusFooter{
+    color: black;
+}
+
+.titleEdiefooter {
+    color: black;
+    font-family: Permanent Marker;
+}
+.soustitlefooter{
+    font-family: Permanent Marker;
+}
+.containSoustitlefooter{
+    font-family: poppins;
+}
+
+.titleinfooter{
+    color: black;
+    font-family: Permanent Marker;
+}
+.footIcon{
+    color: black;
+}
+
+.policetheme{
+    font-family: Permanent Marker;
+}
+.dark .dark\:prose-dark h1 {
+    color: #FF8F0C;
+}
+.dark .dark\:prose-dark h1 {
+    color: #EDECF1;
+}
+.dark .dark\:prose-dark h1 {
+    color: #FF8F0C;
+}
+.mydivhero{
+    background-color: red;
+}
+
+.actionbtn{
+    display: none;
+}
+.bgbgbg{
+    background-color: red;
+}
+.dark .dark\:prose-dark h2 {
+    color: #FF8F0C;
+}

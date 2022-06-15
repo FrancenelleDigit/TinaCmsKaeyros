@@ -3,6 +3,9 @@ import Link from "next/link";
 import { Container } from "../util/container";
 import { useTheme } from ".";
 import { Icon } from "../util/icon";
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone';
+import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 
 export const Header = ({ data }) => {
   const theme = useTheme();
@@ -55,13 +58,13 @@ export const Header = ({ data }) => {
   });
 
   return (
-    <div className={`bg-gradient-to-b ${headerColorCss}`}>
+    <div className={`bg-gradient-to-b footer-site ${headerColorCss}`}>
       <Container size="custom" className="py-0 relative z-10 max-w-8xl">
-        <div className="flex items-center justify-between">
-          <h4 className="select-none text-lg font-bold tracking-tight my-4 transition duration-150 ease-out transform">
+        <div className="flex items-start justify-between w-full">
+          <h1 className="select-none pt-6 sm:pt-0 text-center sm:text-left text-xl md:text-7xl font-bold tracking-tight transition duration-150 ease-out transform">
             <Link href="/" passHref>
-              <a className="flex items-center">
-                <Icon
+              <a className="flex titleEdie pt-0">
+                {/* <Icon
                   parentColor={data.color}
                   data={{
                     name: data.icon.name,
@@ -69,12 +72,17 @@ export const Header = ({ data }) => {
                     style: data.icon.style,
                   }}
                   className="inline-block h-auto w-10 mr-1"
-                />{" "}
-                Tina Starter
+                /> */}{" "}
+                Edie
               </a>
             </Link>
-          </h4>
-          <ul className="flex gap-6 sm:gap-8 lg:gap-10">
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            />
+
+          </h1>
+          <ul className="flex gap-6 sm:gap-2 lg:gap-6 font-bold text-sm text-center sm:text-rigth">
             {data.nav &&
               data.nav.map((item, i) => {
                 const activeItem =
@@ -85,11 +93,16 @@ export const Header = ({ data }) => {
                 return (
                   <li
                     key={`${item.label}-${i}`}
-                    className={activeItem ? activeItemClasses[theme.color] : ""}
+                    className="mr-0 sm:mr-3"
+                    // className={activeItem ? activeItemClasses[theme.color] : ""}
                   >
                     <Link href={`${prefix}/${item.href}`} passHref>
-                      <a className="select-none	text-base inline-block tracking-wide font-regular transition duration-150 ease-out opacity-70 hover:opacity-100 py-8">
+                      <a className="select-none inline-block tracking-wide font-regular transition duration-150 ease-out opacity-70 hover:opacity-100 py-8">
                         {item.label}
+                        {item.label==null &&<MenuSharpIcon
+                          className="inline-block h-auto w-6"
+                          />
+                        }
                       </a>
                     </Link>
                   </li>
@@ -97,11 +110,11 @@ export const Header = ({ data }) => {
               })}
           </ul>
         </div>
-        <div
+       {/*  <div
           className={`absolute h-1 bg-gradient-to-r from-transparent ${
             data.color === "primary" ? `via-white` : `via-black dark:via-white`
           } to-transparent bottom-0 left-4 right-4 -z-1 opacity-5`}
-        />
+        /> */}
       </Container>
     </div>
   );

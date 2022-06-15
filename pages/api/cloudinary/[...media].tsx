@@ -8,9 +8,12 @@ import { isAuthorized } from "@tinacms/auth";
 export const config = mediaHandlerConfig;
 
 export default createMediaHandler({
-  cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
+  /* cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
   api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+  api_secret: process.env.CLOUDINARY_API_SECRET, */
+  cloud_name: "kaeyros",
+  api_key: "359589652147812",
+  api_secret: "u9ApwJI_8x9auuwN2-0CKIRh_Vo",
   authorized: async (req) => {
     if (process.env.NEXT_PUBLIC_USE_LOCAL_CLIENT === "1") {
       return true;
