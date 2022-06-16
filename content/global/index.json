@@ -8,12 +8,12 @@
     "color": "default",
     "nav": [
       {
-        "href": "about",
-        "label": "About us"
-      },
-      {
         "href": "home",
         "label": "Sign up"
+      },
+      {
+        "href": "about",
+        "label": "About us"
       },
       {
         "href": ""

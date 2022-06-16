@@ -2,15 +2,16 @@ import { defineSchema, defineConfig } from "tinacms";
 import { contentBlockSchema } from "../components/blocks/content";
 import { featureBlockSchema } from "../components/blocks/features";
 import { heroBlockSchema } from "../components/blocks/hero";
+import { gamingAreaBlockSchema } from "../components/blocks/gamingArea";
 import { testimonialBlockSchema } from "../components/blocks/testimonial";
 import { iconSchema } from "../components/util/icon";
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuTwoToneIcon from '@mui/icons-material/MenuTwoTone';
 
 const schema = defineSchema({
-  collections: [
+  collections: [                                    
     {
-      label: "Blog Posts",
+      label: "Blog Posts",                                                                            
       name: "post",
       path: "content/posts",
       format: "mdx",
@@ -343,6 +344,7 @@ const schema = defineSchema({
           },
           templates: [
             heroBlockSchema,
+            gamingAreaBlockSchema,
             featureBlockSchema,
             contentBlockSchema,
             testimonialBlockSchema,

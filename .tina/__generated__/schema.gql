@@ -204,6 +204,27 @@ type PageBlocksHero {
   color: String
 }
 
+type PageBlocksGamingAreaActions {
+  label: String
+  type: String
+  icon: Boolean
+  link: String
+}
+
+type PageBlocksGamingAreaImage {
+  src: String
+  alt: String
+}
+
+type PageBlocksGamingArea {
+  tagline: String
+  headline: String
+  text: JSON
+  actions: [PageBlocksGamingAreaActions]
+  image: PageBlocksGamingAreaImage
+  color: String
+}
+
 type PageBlocksFeaturesItemsIcon {
   color: String
   style: String
@@ -232,7 +253,7 @@ type PageBlocksTestimonial {
   color: String
 }
 
-union PageBlocks = PageBlocksHero | PageBlocksFeatures | PageBlocksContent | PageBlocksTestimonial
+union PageBlocks = PageBlocksHero | PageBlocksGamingArea | PageBlocksFeatures | PageBlocksContent | PageBlocksTestimonial
 
 type Page implements Node & Document {
   blocks: [PageBlocks]
@@ -351,6 +372,27 @@ input PageBlocksHeroMutation {
   color: String
 }
 
+input PageBlocksGamingAreaActionsMutation {
+  label: String
+  type: String
+  icon: Boolean
+  link: String
+}
+
+input PageBlocksGamingAreaImageMutation {
+  src: String
+  alt: String
+}
+
+input PageBlocksGamingAreaMutation {
+  tagline: String
+  headline: String
+  text: JSON
+  actions: [PageBlocksGamingAreaActionsMutation]
+  image: PageBlocksGamingAreaImageMutation
+  color: String
+}
+
 input PageBlocksFeaturesItemsIconMutation {
   color: String
   style: String
@@ -381,6 +423,7 @@ input PageBlocksTestimonialMutation {
 
 input PageBlocksMutation {
   hero: PageBlocksHeroMutation
+  gamingArea: PageBlocksGamingAreaMutation
   features: PageBlocksFeaturesMutation
   content: PageBlocksContentMutation
   testimonial: PageBlocksTestimonialMutation

@@ -16,7 +16,8 @@ blocks:
   - tagline: ''
     headline: ''
     text: >
-      ![](https://res.cloudinary.com/kaeyros/image/upload/v1655289776/4d40dbef-37c1-4c79-abbb-69b697f101c3_nkmrhm.jpg)
+      ![](https://res.cloudinary.com/kaeyros/image/upload/v1655289776/4d40dbef-37c1-4c79-abbb-69b697f101c3\_nkmrhm.jpg
+      "")
 
 
       ## LEARNING PLATFORM

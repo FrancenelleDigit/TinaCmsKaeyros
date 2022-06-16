@@ -6,7 +6,7 @@ import { useTheme } from "../layout";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import type { TinaTemplate } from "tinacms";
 
-export const Hero = ({ data, parentField }) => {
+export const GamingArea = ({ data, parentField }) => {
   const theme = useTheme();
   const headlineColorClasses = {
     blue: "from-blue-400 to-blue-600",
@@ -83,11 +83,11 @@ export const Hero = ({ data, parentField }) => {
   );
 };
 
-export const heroBlockSchema: TinaTemplate = {
-  name: "hero",
-  label: "Living library",
+export const gamingAreaBlockSchema: TinaTemplate = {
+  name: "gamingArea",
+  label: "Gaming area",
   ui: {
-    previewSrc: "/blocks/livinglibrary.png",
+    previewSrc: "/blocks/gamingarea.png",
     defaultItem: {
       tagline: "Here's some text above the other text",
       headline: "This Big Text is Totally Awesome",
